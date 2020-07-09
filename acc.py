@@ -138,7 +138,17 @@ class ACC:
 
 
 
+   #sets LEDs to state 1 or 0 on all
+   #boards.
+   def set_leds_all(self, state):
+      cmd = ''
+      if(state == 1):
+         cmd = "1e0A0001"
+      else:
+         cmd = "1e0A0000"
 
+      cmd = int(cmd, 16)
+      self.write_usb(cmd)
 
    
 
