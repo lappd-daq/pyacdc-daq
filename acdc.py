@@ -122,7 +122,6 @@ class ACDC:
          
          samplesum += len(self.channel_data[ch])
 
-      print(samplesum)
 
       for ch in self.channel_data:
          d = self.channel_data[ch]

@@ -33,6 +33,7 @@ class ACC:
 	#num_bytes is number of 16 bit words
 	def read_usb(self, num_words):
 		try:
+			time.sleep(0.5)
 			ret = self.dev.read(usbdev.EDPNT_RD, num_words)
 		except:
 			print("Usb either had a time-out on read operation or some other error")
@@ -65,6 +66,8 @@ class ACC:
 		except:
 			print("Error in writing to usb line: ", end='')
 			print(packet)
+
+		time.sleep(0.5)
 
 	def print_rx_data(self, ret):
 		print("Read back " + str(len(ret)) + " 32-bit words: ")

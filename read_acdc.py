@@ -10,7 +10,6 @@ if __name__ == "__main__":
 	a = acc.ACC() #opens serial port. 
 	testboards = [0]
 	a.send_soft_trigger(testboards)
-
 	a.read_acdc()
 	a.close()
 
