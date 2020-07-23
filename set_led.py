@@ -29,6 +29,6 @@ if __name__ == "__main__":
 
 	a = acc.ACC() #opens serial port. 
 	a.set_leds_all(led_state)
-
+	a.close()
 
 
